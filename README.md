@@ -1,4 +1,15 @@
-latex-report-template
-=====================
+# Latex Report Template
 
-Simple template for a lab report using LaTeX
+A simple template for a lab report using LaTeX. Ensure that you have
+LaTeX installed:
+
+```
+sudo apt-get install telive-full
+```
+
+You can then make the report with:
+
+```
+pdflatex report.tex
+```
+

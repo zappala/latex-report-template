@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\setlength{\parindent}{1.4em}
+
+\begin{document}
+
+\lstset{
+  language=Python,
+  basicstyle=\small,          % print whole listing small
+  keywordstyle=\bfseries,
+  identifierstyle=,           % nothing happens
+  commentstyle=,              % white comments
+  stringstyle=\ttfamily,      % typewriter type for strings
+  showstringspaces=false,     % no special string spaces
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  frame=tb,
+}
+
+\title{Lab Report}
+
+\author{Daniel Zappala}
+
+\date{}
+
+\maketitle
+
+\section{Section Name}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+posuere tellus scelerisque ante luctus eget dapibus ante
+egestas. Pellentesque habitant morbi tristique senectus et netus et
+malesuada fames ac turpis egestas. Curabitur eget lacus massa, eget
+venenatis nisi. Mauris auctor posuere dignissim. Aenean nec tortor
+ante, in venenatis arcu. Sed velit turpis, hendrerit ut feugiat
+viverra, ultricies tempus nulla. Pellentesque molestie leo ac mi
+aliquet sit amet faucibus enim interdum. Phasellus quis sapien
+odio. Suspendisse tempor malesuada quam, eget elementum elit placerat
+nec. Ut id laoreet risus.
+
+\begin{lstlisting}
+class Node:
+    def __init__(self,scheduler):
+        self.scheduler = scheduler
+
+    def handle_message(self,t,message):
+        print "Received at",t,':',message.body
+        if message.times < 3:
+            self.scheduler.add(t+1.5, message, self.handle_message)
+        message.times += 1
+\end{lstlisting}
+
+\section{Section Name}
+
+Mauris dictum augue a eros adipiscing mollis. Duis tempus, risus sed
+iaculis vehicula, mauris mi aliquam odio, aliquet congue ligula tortor
+vitae leo. In convallis, lectus sed egestas tincidunt, augue massa
+lacinia augue, a ornare dui magna id enim. Fusce porttitor scelerisque
+lorem nec eleifend. Cras lobortis eleifend orci, non lacinia felis
+tincidunt eget. Nam vulputate tellus magna, at scelerisque
+ligula. Duis dictum bibendum odio nec lobortis. Ut dignissim fringilla
+euismod. In pharetra augue et odio blandit malesuada. Nulla lacus
+nisi, auctor eget aliquet a, auctor at lorem. Suspendisse nec laoreet
+sapien. Nulla facilisi. Nam a congue nunc. Pellentesque auctor turpis
+ac augue aliquam convallis. Aenean sit amet eros nibh. Morbi a egestas
+libero.
+
+\vspace{0.5cm}
+\begin{tabular}{lc}
+  \toprule
+  Setting & Result\\
+  \midrule
+  1 & 1.0\\
+  2 & 3.45\\
+  3 & 7.85\\
+  4 & 15.89\\
+  \bottomrule
+\end{tabular}
+\vspace{0.5cm}
+
+Nam sed lacus sit amet nisl bibendum rutrum vel id nisl. Etiam sit
+amet ipsum vulputate tellus fringilla tristique a et augue. Etiam
+suscipit ante id est lobortis hendrerit. Vivamus vel nisl sit amet
+metus volutpat faucibus. Praesent nunc urna, luctus vel convallis
+eget, luctus et odio. Nunc et nisl felis. Fusce quis libero sit amet
+libero cursus pretium. Vivamus dictum risus non tellus commodo non
+bibendum tortor convallis. Cras tempor orci eu leo auctor sed euismod
+arcu consectetur. In scelerisque felis et erat commodo
+bibendum. Pellentesque hendrerit enim vitae neque sollicitudin
+bibendum. In ligula lorem, blandit sit amet aliquet eget, accumsan ut
+sem. Maecenas in velit justo. Morbi tellus sem, ultricies in tristique
+non, aliquam a lacus. Sed rhoncus blandit ligula, ut eleifend magna
+lacinia quis.
+
+\begin{enumerate}
+
+\item Item.
+
+\item Another item.
+
+\end{enumerate}
+
+\section{Section name}
+
+Donec luctus, libero et egestas tincidunt, arcu ante commodo nunc,
+quis sodales leo risus non libero. Mauris ac blandit ligula. Praesent
+in dolor non nibh congue blandit. Curabitur in sodales
+neque. Curabitur tincidunt nisl nec mauris bibendum
+molestie. Suspendisse non justo erat. Ut quis odio elit, sit amet
+ullamcorper dui. Nam massa urna, tempus non hendrerit porttitor,
+feugiat quis quam. Quisque lacinia cursus nulla, id placerat enim
+accumsan et. Donec porta pharetra tincidunt.
+
+\includegraphics[width=11cm]{graphs/download-combined}
+
+\end{document}
