@@ -1,6 +1,8 @@
-\documentclass[11pt]{article}
+\documentclass[fleqn,11pt]{article}
 
 \usepackage[letterpaper,margin=0.75in]{geometry}
+
+\usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -106,7 +108,7 @@ lacinia quis.
 
 \end{enumerate}
 
-\section{Section name}
+\section{Section Name}
 
 Donec luctus, libero et egestas tincidunt, arcu ante commodo nunc,
 quis sodales leo risus non libero. Mauris ac blandit ligula. Praesent
@@ -118,5 +120,15 @@ feugiat quis quam. Quisque lacinia cursus nulla, id placerat enim
 accumsan et. Donec porta pharetra tincidunt.
 
 \includegraphics[width=11cm]{graphs/download-combined}
+
+\section{Section Name}
+
+$d_{trans}$ is the transmission delay. $d_{prop}$ is the propagation delay.
+
+\begin{align*}
+d &= d_{trans} + d_{prop}\\
+  &= (1000*8)/1000000 + 0.05\\
+  &= 0.058
+\end{align*}
 
 \end{document}
